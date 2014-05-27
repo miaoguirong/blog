@@ -1,0 +1,4 @@
+<div id="post" >
+    <h3><%= post.id.to_s %><em>:   </em><%= link_to_unless_current post.title, post %></h3>
+    <%= simple_format post.content %>
+</div>

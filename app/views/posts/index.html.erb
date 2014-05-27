@@ -1,0 +1,16 @@
+
+<a id = "top"></a>
+<h1 align = "center">Tomlelouch's Blog</h1>
+<hr>
+<strong><em><%= link_to 'Create New Post', new_post_path %></em></strong>
+<hr>
+<h2>Current posts:</h2>
+
+  <% @posts.each do |post| %>
+      <%= render :partial => post %>
+      <%= link_to 'Edit', edit_post_path(post) %>
+      <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
+<hr>
+<a href="#top">TOP</a>
+
