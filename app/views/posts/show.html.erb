@@ -2,14 +2,14 @@
 <hr>
 <h3>Comments:</h3>
 <% @post.comments.each do |comment| %>
-	<div id = "comment">
+	<div id = "comment" style = "opacity:0.8; height: relativity; width: 300px; background-color: black" >
 		<p>
 		   <strong>Commented <%= time_ago_in_words(comment.created_at) %></strong><br>
 		   <%= comment.content %>
 		</p>
 	</div>
 <% end %>
-<hr>
+<hr><br>
 
 <%= form_for [@post,Comment.new] do |f| %>
 	<p>
